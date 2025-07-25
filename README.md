@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Groq API](https://img.shields.io/badge/Powered%20by-Groq-orange.svg)](https://groq.com/)
 
-A powerful, secure terminal-based (CLI) coding assistant that leverages Groq's lightning-fast AI model (Moonshot Kimi K2) to help you review code, edit files, and get instant coding assistance—all from your command line.
+A powerful, secure terminal-based (CLI) coding assistant that leverages Groq's lightning-fast and state of the art AI model (Moonshot Kimi K2) to help you review code, edit files, and get instant coding assistance—all from your command line.
 
 <img src="https://github.com/alby13/qroq-code/blob/main/screenshot1.jpg">
 
