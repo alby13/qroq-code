@@ -1,4 +1,4 @@
-# 🚀 Groq-Code: AI Command Terminal Interface Coding Assistant
+# 🚀 Groq-Code: AI CLI Coding Assistant
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
