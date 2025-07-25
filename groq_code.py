@@ -1363,6 +1363,20 @@ Keep your response concise but helpful."""
            self.screens["main"].add_content(f"🚨 {error_msg}")
            return error_msg
    
+    def _clean_ai_code_output(self, content: str) -> str:
+        """Remove markdown code blocks from AI output"""
+        lines = content.strip().split('\n')
+        
+        # Remove opening code block (```python, ```javascript, etc.)
+        if lines and lines[0].strip().startswith('```'):
+            lines = lines[1:]
+        
+        # Remove closing code block
+        if lines and lines[-1].strip() == '```':
+            lines = lines[:-1]
+        
+        return '\n'.join(lines)
+
     def _handle_edit_command(self, args: List[str]) -> str:
        """Handle edit command safely"""
        if len(args) < 2:
@@ -1392,12 +1406,16 @@ Keep your response concise but helpful."""
 
     Edit request: {edit_prompt}
 
-    Please provide the complete updated file content."""
+    Please provide the complete updated file content without markdown code blocks."""
            
            self.shared["user_prompt"] = ai_prompt
            self.status_message = "AI is editing your file..."
            
            response = self.llm_node.run(self.shared)
+
+           # Clean the AI output to remove markdown code blocks
+           raw_content = self.shared.get('llm_output', '')
+           new_content = self._clean_ai_code_output(raw_content)
            
            # Show preview
            new_content = self.shared.get('llm_output', '')
