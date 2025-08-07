@@ -1,3 +1,5 @@
+Update 8-7-2025 - Groq has released their official Groq Code Which Can Be Accessed Here: https://github.com/build-with-groq/groq-code-cli
+
 # 🚀 Groq-Code: AI CLI Coding Assistant
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
